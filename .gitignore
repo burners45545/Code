@@ -1,0 +1,62 @@
+# Sensitive files
+config.py
+urls.db
+*.db
+debug_output.html
+results.json
+
+# Logs
+logs/
+*.log
+
+# Cache
+cache/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+venv311/
+env/
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build files
+*.exe
+dist/
+build/
+*.spec
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Temporary files
+temp_for_zip/
+*.tmp
+
+# Executables
+*.exe
+
+# Environment files
+.env
+
+# Test files
+test_*.py
+
+# Database files
+*.db 

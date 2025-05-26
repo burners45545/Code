@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Counter Tool</title>
+    <link rel="stylesheet" href="css/url-analyzer.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>URL Counter Tool</h1>
+            <p>Analyze and archive your URLs with ease</p>
+        </header>
+
+        <main>
+            <section class="card input-section">
+                <div class="controls">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="archiveOnly" name="archiveOnly">
+                        <label for="archiveOnly">Show archived URLs only</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="autoProcess" name="autoProcess">
+                        <label for="autoProcess">Auto-process on paste</label>
+                    </div>
+                </div>
+
+                <textarea id="inputText" placeholder="Paste URLs here (one per line or separated by spaces)"></textarea>
+
+                <div class="button-group">
+                    <button id="countButton">Process URLs</button>
+                    <button id="clearButton">Clear All</button>
+                </div>
+
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <span>Processing URLs...</span>
+                </div>
+
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-fill" style="width: 0%"></div>
+                    <div id="progressText" class="progress-text">0%</div>
+                </div>
+            </section>
+
+            <div id="output"></div>
+
+            <div class="url-lists">
+                <section class="url-section">
+                    <h3>Archived URLs</h3>
+                    <div class="results-actions">
+                        <button id="copyArchivedButton" class="copy-btn">Copy Archived URLs</button>
+                    </div>
+                    <ul id="archivedUrlsList" class="url-list"></ul>
+                </section>
+
+                <section class="url-section">
+                    <h3>Non-Archived URLs</h3>
+                    <div class="results-actions">
+                        <button id="copyNonArchivedButton" class="copy-btn">Copy Non-Archived URLs</button>
+                    </div>
+                    <ul id="nonArchivedUrlsList" class="url-list"></ul>
+                </section>
+            </div>
+
+            <div id="charts">
+                <canvas id="archiveChart"></canvas>
+                <canvas id="tweetChart"></canvas>
+            </div>
+
+            <!-- Add server control section -->
+            <div class="server-control">
+                <button id="startServerBtn" class="btn btn-primary">Start Archive Server</button>
+                <span id="serverStatus" class="status-indicator">Server Status: Stopped</span>
+            </div>
+        </main>
+    </div>
+
+    <script src="url-analyzer.js"></script>
+</body>
+</html> 

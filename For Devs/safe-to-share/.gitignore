@@ -1,0 +1,30 @@
+# Python virtual environments
+venv/
+venv311/
+__pycache__/
+
+# Logs and cache
+logs/
+cache/
+*.log
+
+# Database files
+*.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Executables
+*.exe
+
+# Environment files
+.env
+
+# Test files
+debug_output.html
+test_*.py
+
+# Build files
+build/
+dist/ 
